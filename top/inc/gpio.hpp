@@ -2,7 +2,6 @@
 #define GPIO_HPP_
 
 #include <stdint.h>
-
 // NOTE one pin may only be used as a single in/out at a time
 
 enum PUPD
@@ -27,7 +26,7 @@ enum EDGE
 
 struct gpio_in_t
 {
-  gpio_in_t(uint8_t pin) : pin(pin) {}
+  gpio_in_t(uint8_t p) : pin(p) {}
 
   /// @brief initialize any clocks and connect the pin to the pad as an input
   /// @param pullup_pulldown configures the pull up/down resistor on the pad
@@ -47,7 +46,7 @@ private:
 
 struct gpio_out_t
 {
-  gpio_in_t(uint8_t pin) : pin(pin) {}
+  gpio_out_t(uint8_t pin) : pin(pin) {}
 
   /// @brief initialize any clocks and connect the pin to the pad as an output
   /// @param pullup_pulldown set the pull up/down resistor on the pad
