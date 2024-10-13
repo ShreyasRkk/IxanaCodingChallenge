@@ -17,12 +17,12 @@ void DeviceDriver::configurePinModes() {
     gpio_out_t SELECT(PIN_SELECT);  
 
     // Initializing the pins 
-    nRST.init(PUPD_UP, OUT_PUSHPULL);
+    nRST.init(PUPD_UP, OUT_OPENDRAIN);
     nTEST.init(PUPD_UP, OUT_PUSHPULL);
     DONE.init(PUPD_NONE);
     SUCCESS.init(PUPD_NONE);
-    CTRL.init(PUPD_UP, OUT_PUSHPULL);
-    SELECT.init(PUPD_UP, OUT_PUSHPULL);
+    CTRL.init(PUPD_UP, OUT_OPENDRAIN);
+    SELECT.init(PUPD_UP, OUT_OPENDRAIN);
 
     // Ensuring nTEST is always high
     nTEST.write(true);
