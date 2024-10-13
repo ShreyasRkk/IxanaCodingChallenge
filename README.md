@@ -1,7 +1,4 @@
-# IxanaCodingChallenge
-
-
-# Device Driver for Modes 0, 1, and 2
+# Device Driver for Multi Modes
 
 ## Overview
 This project implements a device driver that configures a device to operate in **Modes 0, 1, and 2** based on the provided pin descriptions. The driver controls the configuration of these modes through various GPIO pins (`nRST`, `DONE`, `SUCCESS`, `CTRL`, `SELECT`, and `nTEST`) and uses helper functions for delay and communication.
