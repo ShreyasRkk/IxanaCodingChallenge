@@ -12,6 +12,7 @@ The driver interacts with these pins to reset the device, enter a specific mode,
 
 ## Project Structure
 
+```bash
 top
 ├── driver.hpp          # Header file for DeviceDriver class
 ├── driver.cpp          # Implementation file for DeviceDriver class
@@ -21,7 +22,7 @@ top
     ├── coms.h          # Communication functions (e.g., send_communications)
     ├── delay.h         # Delay functions (e.g., delay_us)
     └── gpio.hpp        # GPIO handling for pin initialization, writing, reading
-
+```
 
 ## Assumptions
 The GPIO, communication, and delay functions are assumed to be defined in the provided gpio.hpp, coms.h, and delay.h files, but the actual implementations are not provided in this project. These functions are assumed to work as per their declarations:
