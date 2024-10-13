@@ -3,10 +3,11 @@
 
 int main() {
     DeviceDriver driver;
-
+    std::cout << "Resetting device..." << std::endl;
     driver.resetDevice();
-    
-    // Example for Mode 0
+
+    // Test Mode 0
+    std::cout << "Entering Mode 0..." << std::endl;
     driver.enterMode0();
     if (driver.isConfigurationDone()) {
         if (driver.isSuccess()) {
@@ -14,9 +15,12 @@ int main() {
         } else {
             std::cout << "Mode 0 configuration failed!" << std::endl;
         }
+    } else {
+        std::cout << "Mode 0 configuration not completed." << std::endl;
     }
 
-    // Example for Mode 1
+    // Test Mode 1
+    std::cout << "Entering Mode 1..." << std::endl;
     driver.enterMode1();
     if (driver.isConfigurationDone()) {
         if (driver.isSuccess()) {
@@ -24,9 +28,12 @@ int main() {
         } else {
             std::cout << "Mode 1 configuration failed!" << std::endl;
         }
+    } else {
+        std::cout << "Mode 1 configuration not completed." << std::endl;
     }
 
-    // Example for Mode 2
+    // Test Mode 2
+    std::cout << "Entering Mode 2..." << std::endl;
     driver.enterMode2();
     if (driver.isConfigurationDone()) {
         if (driver.isSuccess()) {
@@ -34,6 +41,8 @@ int main() {
         } else {
             std::cout << "Mode 2 configuration failed!" << std::endl;
         }
+    } else {
+        std::cout << "Mode 2 configuration not completed." << std::endl;
     }
 
     return 0;
